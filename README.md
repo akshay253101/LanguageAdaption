@@ -30,4 +30,4 @@ Ruby is required for Linguist:
 ![alt text](https://github.com/akshay253101/LanguageAdaption/blob/main/reports/android-language.png)
 
 ## Uses
-[Scivision Linguist Python](https://github.com/scivision/linguist-python)
+[Scivision Linguist Python](https://github.com/scivision/linguist-python) - Pure Python command-line wrapper of Ruby-based Github Linguist. 
