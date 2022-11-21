@@ -25,7 +25,7 @@ Ruby is required for Linguist:
 1. Execute language-detector.py
 2. Enter git url and branch name in terminal
 3. Each tag data will be printed on terminal. 
-4. After successful attempt repo_name.png and repon_name.svg can be found at reports dir.
+4. After successful attempt repo_name.png and repo_name.svg can be found at reports dir.
 
 ![alt text](https://github.com/akshay253101/LanguageAdaption/blob/main/reports/android-language.png)
 

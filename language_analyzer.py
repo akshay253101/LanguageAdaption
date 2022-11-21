@@ -4,7 +4,7 @@ from pathlib import Path
 import time
 from linguist_wrapper import linguist
 
-# Creates a repon object of given git and clones if not exist. 
+# Creates a repo object of given git and clones if not exist. 
 def git_repo(url: str, branch: str, repo_path: str):
     if not (repo_path / ".git").is_dir(): repo = git.Repo.clone_from(url, repo_path)
     else: repo = git.Repo(repo_path)
@@ -21,8 +21,8 @@ def repo_languages() -> Tuple[Set[str], List[Dict[str,str]], str]:
 
     repo = git_repo(repo_url, branch_name, repo_path)
     # Sorts tag by version_code in ascending order
-    tags = sorted(repo.tags, key= lambda t: list(map(int, t.name.split('v')[1].split('.'))))
-    # Maintaings set of headers, we don't know what all languages are used in repo thought out the git-history 
+    tags = sorted(repo.tags, key= lambda t: list(map(str, t.name.split('v')[1].split('.'))))
+    # Maintaining set of headers, we don't know what all languages are used in repo thought out the git-history 
     # so by looping over tags we update all language detected at that checkout. 
     headers: Set[str] = set()
     langs: List[Dict[str,str]] = [] 

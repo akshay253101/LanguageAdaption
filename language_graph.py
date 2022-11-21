@@ -12,7 +12,7 @@ def create_plot(path: str):
     # set figureSize to full screen
     plt.figure(figsize=(16,9), tight_layout=True)
 
-    # Loop over lanugages detected in repo since first tag
+    # Loop over languages detected in repo since first tag
     for lang in lang_data.columns:
         plt.plot(data.Date, data[lang], marker='o', label = lang)
         current_major_tag_version = "0"

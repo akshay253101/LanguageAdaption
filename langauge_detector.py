@@ -4,7 +4,7 @@ from typing import Dict, List, Set
 from language_graph import create_plot
 from language_analyzer import repo_languages
 
-# Save language anlaysis in csv
+# Save language analyses in csv
 def dump_language_data(path: str, headers: Set[str], langs: List[Dict[str,str]] ) -> str:
     csv_path = path + ".csv"
     if os.path.exists(csv_path): os.remove(csv_path)
@@ -16,10 +16,10 @@ def dump_language_data(path: str, headers: Set[str], langs: List[Dict[str,str]] 
             writer.writerow(lang)
         file.close()
 
-def analyse():
+def analyze():
     (headers, langs, repo_name) = repo_languages()
     path = "./reports/" + repo_name + "-language"
     dump_language_data(path, headers, langs)
     create_plot(path)
 
-analyse()
+analyze()
